@@ -1,0 +1,15 @@
+.tt {
+  color: #025999;
+  font-weight: 600;
+  @include fz-30;
+}
+.tt-sec,
+.tt-three {
+  @include fz-20;
+  color: $color-pri;
+  font-weight: 700;
+}
+.tt-three {
+  color: $color-text;
+  font-weight: 400;
+}

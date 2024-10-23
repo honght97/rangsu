@@ -1,0 +1,14 @@
+.pagination
+  ul.page-numbers
+    li
+      +self("«", "page-numbers disable")
+    li
+      span.page-numbers.current(aria-current='page') 1
+    li
+      +self("2", "page-numbers")
+    li
+      span.page-numbers.dots ...
+    li
+      +self("3", "page-numbers")
+    li
+      +self("»", "page-numbers")

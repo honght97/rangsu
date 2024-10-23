@@ -1,0 +1,31 @@
+.page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  .page-numbers {
+    @include box(2.4rem);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition;
+    border: 1px solid #025899;
+    color: #025899;
+    line-height: 1;
+    &:hover {
+      color: $color-text;
+      border-color: $color-text;
+    }
+    &.current {
+      color: $color-text;
+      border-color: $color-text;
+    }
+    &.dots {
+      pointer-events: none;
+    }
+    &.disable {
+      display: none;
+    }
+  }
+}

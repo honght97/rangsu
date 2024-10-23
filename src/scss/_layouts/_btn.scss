@@ -1,0 +1,48 @@
+.btn {
+  @include fz-18;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: 0.3s ease all;
+  z-index: 1;
+  overflow: hidden;
+  font-family: var(--font-pri);
+  font-weight: 700;
+  background: $bg;
+  color: $color-pri;
+  border-radius: 99px 99px 99px 99px;
+  padding: 8px 15px 8px 15px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  &::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: $color-second;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.btn--sec {
+  &::before {
+    background-color: $color-text;
+  }
+}

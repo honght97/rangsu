@@ -1,0 +1,185 @@
+
+header.header.js-header
+  .top
+    .container
+      .top-wrap
+        .top-hotline
+          +img("common/hotline.png")
+          .top-text
+            span Hotline tư vấn miễn phí:&#160;
+            +blank("", "", 'tel:0941818618')
+              strong 094 1818 618
+        .top-action
+          .top-open
+            span Mở cửa:&#160;
+            strong 8h00 – 20h00
+          .top-search
+            span | Tìm kiếm:
+            a.search-icon(href='#searchModal', rel='modal:open')
+              +img("common/ico_search.svg")
+          .top-social
+            ul.social
+              li.social-item
+                a(href="#" target="_blank")
+                  +img("common/facebook.svg")
+              li.social-item
+                a(href="#" target="_blank")
+                  +img("common/youtube.svg")
+          .top-schedule
+            a.btn(href='#scheduleModal', rel='modal:open')
+              span Đặt lịch hẹn
+              +img("common/schedule.svg")
+  .header-outer
+    .container
+      .header-wrap
+        .header-main
+          .header-logo
+            a(href="#" target="_self")
+              +img("common/logo.png")
+            h1.hide-sitename CTRLS VN
+          nav.header-nav
+            ul.menu-list
+              li.menu-item.current-menu-item.dropdown
+                a(href="#")
+                  span Giới thiệu
+                .child-wrap
+                  .child-group
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+              li.menu-item.dropdown
+                a(href="#")
+                  span Bọc răng sứ thẩm mỹ
+                .child-wrap
+                  .child-group
+                    p.child-tt
+                      a(href="#" target="_self") các loại răng sứ
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+                  .child-group
+                    p.child-tt
+                      a(href="#" target="_self") răng sứ kim loại
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+                  .child-group
+                    p.child-tt
+                      a(href="#" target="_self") răng toàn sứ cao cấp
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+              li.menu-item.dropdown
+                a(href="#")
+                  span Dán sứ Veneer
+                .child-wrap
+                  .child-group
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+              li.menu-item.dropdown
+                a(href="#")
+                  span Bảng giá răng sứ
+                .child-wrap
+                  .child-group
+                    ul.menu-list
+                      li.menu-item
+                        +self
+                          span Khóa học 1
+                      li.menu-item
+                        +self
+                          span Khóa học 2
+                      li.menu-item
+                        +self
+                          span Khóa học 3
+              li.menu-item
+                a(href="#")
+                  span Khách hàng
+              li.menu-item
+                a(href="#")
+                  span Kiến thức
+              li.menu-item
+                a(href="#")
+                  span Liên hệ
+          .header-action
+            .top-search
+              a.search-icon(href='#searchModal', rel='modal:open')
+                +img("common/ico_search.svg")
+            .top-schedule
+              a.btn(href='#scheduleModal', rel='modal:open')
+                span Đặt lịch hẹn
+                +img("common/schedule.svg")
+        .menu-bar.js-bar
+          .menu-icon
+#searchModal.modal.search-modal
+  form(action="")
+    .form-search
+      input.form-input(type="text" placeholder="Tìm kiếm")
+      button.search-icon
+        +img("common/ico_search.svg")
+#scheduleModal.modal.schedule-modal
+  a.icon-modal(href='#', rel='modal:close')
+      +img("common/close.svg")
+  .schedule-heading
+    strong Đặt lịch tư vấn
+  form(action="")
+    .form-inner
+      .form-group
+        .form-label
+          input.form-input(type="text" placeholder="Họ và tên khách hàng *")
+        .form-label
+          input.form-input(type="text" placeholder="Số điện thoại khách hàng *")
+      .form-group
+        .form-label
+          input.form-input(type="date" placeholder="Tìm kiếm")
+        .form-label
+          select.js-select2
+            option(value="") Chọn cơ sở gần bạn
+            option(value="") Chọn cơ sở gần bạn 1
+            option(value="") Chọn cơ sở gần bạn 2 Chọn cơ sở gần bạn 2 Chọn cơ sở gần bạn 2
+      p.note * Thông tin của bạn sẽ được bảo mật!
+      .schedule-btn
+        button.btn(type="submit")
+          span Đặt lịch hẹn
+        .schedule-time
+          p Giờ làm việc:
+          p
+            strong 8h00 đến 20h00
+
+
+

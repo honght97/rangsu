@@ -1,0 +1,55 @@
+include ../_mixins/_all
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = ''
+  -path         = '.'
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect', href='//fonts.googleapis.com')
+    link(rel='preconnect', href='//fonts.gstatic.com', crossorigin='')
+    link(href='//fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap', rel='stylesheet')
+    link(rel='stylesheet' href='./assets/js/library/aos/aos.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css')
+    link(rel='stylesheet' href='./assets/js/library/select2/select2.min.css')
+    if pageID == 'homepage'
+      //- link(rel='stylesheet' href='./assets/js/library/swiper/swiper-bundle.min.css')
+    if pageID == 'about'
+      //- link(rel='stylesheet' href='./assets/js/library/fancybox/fancybox.css')
+    if pageID == 'homepage'
+      link(rel='stylesheet' href='./assets/css/home.css')
+    if pageID == 'about'
+      //- link(rel='stylesheet' href='./assets/css/about.css')
+    if pageID == 'p-blog'
+      link(rel='stylesheet' href='./assets/css/blog.css')
+    if pageID == 'p-blogdt'
+      link(rel='stylesheet' href='./assets/css/blog-dt.css')
+    link(rel='icon' type='image/png' href='./assets/images/mona.png')
+    title Template
+
+  body(class=pageID)
+    include ../_modules/header-mobile
+    include ../_modules/header
+    main.main
+      block container
+    include ../_modules/footer
+    script(src='./assets/js/library/jquery/jquery.js')
+    script(src='./assets/js/library/aos/aos.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js')
+    script(src='./assets/js/library/select2/select2.min.js')
+    script(src='./assets/js/library/matchHeight/jquery.matchHeight.js')
+    if pageID == 'homepage'
+      //- script(src='./assets/js/library/swiper/swiper-bundle.min.js')
+    if pageID == 'about'
+      //- script(src='./assets/js/library/fancybox/fancybox.umd.js')
+    script(src='./assets/js/main.js' type='module')
+    block scripts

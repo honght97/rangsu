@@ -1,0 +1,149 @@
+extends _layout/default
+
+block vars
+  -title        = 'Blog'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'p-blogdt'
+  -path         = '.'
+
+block scripts
+
+block container
+  .detail-outer
+    .detail-wrap(data-aos="fade-up")
+      +breadcrumb(['Home', 'Kiến thức Răng sứ', 'Bọc răng sứ có bảo hiểm y tế không'])
+      .detail-inner
+        .img-full
+          +img("blog/img_1.jpg")
+        .detail-top
+          ul.tag
+            li.tag-item
+              +self("Kiến thức Răng sứ")
+          .detail-review
+            .times
+              +img("blog/time.svg")
+              span 20.10.2024
+            .review
+              p.stars.js-stars
+                +img("blog/active-star.png", "1")
+                +img("blog/inactive-star.png", "2")
+                +img("blog/inactive-star.png", "3")
+                +img("blog/inactive-star.png", "4")
+                +img("blog/inactive-star.png", "5")
+              span Đánh giá post
+        h1.tt-sec Răng Sứ 2 Triệu Có Tốt Không? Có Mấy Loại?
+        .user-wrap
+          .user-img
+            +img("blog/user_1.png")
+          .user-inner
+            .user-content
+              p.user-tt Cố vấn chuyên môn:&#160;
+                strong
+                  a(href="#") Bác sĩ CKI Mai Hồng Thái
+              ul
+                li Trưởng khoa I-Dent DiamondTech.
+                li Bác sĩ CKI Răng Hàm Mặt Đại học Y Dược TP HCM.
+                li 13 năm kinh nghiệm – Hơn 4.000 ca thẩm mỹ răng sứ thành công.
+            .user-action
+              a.btn(href='#scheduleModal', rel='modal:open')
+                span Đặt lịch hẹn
+              a.btn(href='#')
+                span Xem hồ sơ
+        .mona-content
+          p Nhiều người mong muốn có một hàm răng đẹp, đều và trắng sáng. Tuy nhiên lại e ngại chi phí cao của bọc răng sứ. Hiểu được điều đó, răng sứ giá 2 triệu ra đời. Qua đó mang đến giải pháp thẩm mỹ răng hiệu quả với mức giá phải chăng. Liệu răng sứ giá 2 triệu có thực sự đảm bảo chất lượng? Hãy cùng nha khoa i-Dent DiamondTech tìm hiểu chi tiết trong bài viết này.
+          #ez-toc-container
+          h2 1. Răng sứ 2 triệu có tốt không?
+          p Thực tế, các loại răng sứ giá 2 triệu không thể so sánh chất lượng với những sản phẩm ở phân khúc cao cấp. Tuy nhiên, răng sứ trong tầm giá này vẫn đáp ứng được nhu cầu cơ bản của người sử dụng về khả năng ăn nhai. Đồng thời đảm bảo tính thẩm mỹ và độ bền.
+          ul
+            li
+              strong Khả năng ăn nhai:
+              | &#160;Tuy răng sứ có giá 2 triệu nhưng răng vẫn đảm bảo được độ cứng, chịu lực tốt và khả năng ăn nhai hằng ngày. Bạn hoàn toàn có thể yên tâm sử dụng mà không lo răng bị dễ
+            li
+              strong Khả năng ăn nhai:
+              | &#160;Tuy răng sứ có giá 2 triệu nhưng răng vẫn đảm bảo được độ cứng, chịu lực tốt và khả năng ăn nhai hằng ngày. Bạn hoàn toàn có thể yên tâm sử dụng mà không lo răng bị dễ
+            li
+              strong Khả năng ăn nhai:
+              | &#160;Tuy răng sứ có giá 2 triệu nhưng răng vẫn đảm bảo được độ cứng, chịu lực tốt và khả năng ăn nhai hằng ngày. Bạn hoàn toàn có thể yên tâm sử dụng mà không lo răng bị dễ
+            li
+              strong Khả năng ăn nhai:
+              | &#160;Tuy răng sứ có giá 2 triệu nhưng răng vẫn đảm bảo được độ cứng, chịu lực tốt và khả năng ăn nhai hằng ngày. Bạn hoàn toàn có thể yên tâm sử dụng mà không lo răng bị dễ
+            li
+              strong Khả năng ăn nhai:
+              | &#160;Tuy răng sứ có giá 2 triệu nhưng răng vẫn đảm bảo được độ cứng, chịu lực tốt và khả năng ăn nhai hằng ngày. Bạn hoàn toàn có thể yên tâm sử dụng mà không lo răng bị dễ
+          figure
+            +img("blog/img_1.jpg")
+            figcaption Răng sứ giá 2 triệu được đánh giá đáp ứng được tính thẩm mỹ và khả năng ăn nhai.
+          blockquote
+            span Xem ngay:&#160;
+            a(href="#") Bọc răng sứ nguyên hàm giá bao nhiêu?
+            span &#160;Nên bọc không?
+          table
+            thead
+              tr
+                th Loại răng sứ
+                th Giá tiền
+                th Thời gian bảo hành
+            tbody
+              tr
+                td Răng sứ kim loại (Ceramco 3 – Mỹ)
+                td 1.000.000 VNĐ/Răng
+                td 3 năm
+              tr
+                td Răng sứ kim loại (Ceramco 3 – Mỹ)
+                td 1.000.000 VNĐ/Răng
+                td 3 năm
+              tr
+                td Răng sứ kim loại (Ceramco 3 – Mỹ)
+                td 1.000.000 VNĐ/Răng
+                td 3 năm
+              tr
+                td Răng sứ kim loại (Ceramco 3 – Mỹ)
+                td 1.000.000 VNĐ/Răng
+                td 3 năm
+        .detail-share
+          ul.social
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/facebook.svg")
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/youtube.svg")
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/tik-tok.svg")
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/pinterest.svg")
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/twitter.svg")
+            li.social-item
+              a(href="#" target="_blank")
+                +img("common/linkedin.svg")
+  .banner.banner-sec
+    .container
+      .banner-inner
+        .banner-heading
+          p.tt-three TRUNG TÂM THẨM MỸ
+          p.tt-sec RĂNG SỨ CÔNG NGHỆ CAO
+          p.tt I-DENT DIAMONDTECH
+        .banner-content
+          p I-DENT DIAMONDTECH là trung tâm thẩm mỹ răng sứ tiên phong tại Việt Nam trong việc ứng dụng trí tuệ nhân tạo AI và khoa học kĩ thuật nha khoa công nghệ cao kết hợp cùng tay nghề chuyên môn của đội ngũ bác sĩ – chuyên gia chuyên sâu để mang đến cho khách hàng một NỤ CƯỜI KHỎE ĐẸP, giúp bạn có một hàm răng hài hòa, nổi bật về THẨM MỸ nhưng vẫn bảo tồn được SỨC KHỎE của răng về lâu dài
+        .banner-action
+          a.btn.btn--sec(href='#scheduleModal', rel='modal:open')
+            span Đăng ký
+            +img("common/down.svg")
+          span.banner-support TƯ VẤN ONLINE CÙNG CHUYÊN GIA
+        .top-hotline
+          +img("blog/hotline_1.png")
+          .top-text
+            span Hotline 24/7:&#160;
+            +blank("", "", 'tel:0941818618')
+              strong 094 1818 618
+
+
+
+

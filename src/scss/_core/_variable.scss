@@ -1,0 +1,14 @@
+:root {
+  --font-pri: "Mulish", sans-serif;
+}
+
+$color-pri: #025999;
+$color-second: #005f9d;
+$color-text: #000000;
+$header: 12rem;
+$bg: linear-gradient(to right, #dfaa23 0%, #fbf08d 48%, #dfaa23 100%);
+@mixin max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

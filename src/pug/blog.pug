@@ -1,0 +1,53 @@
+extends _layout/default
+
+block vars
+  -title        = 'Blog'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'p-blog'
+  -path         = '.'
+
+block scripts
+
+block container
+  section.banner
+    .container(data-aos="fade-up")
+      .banner-inner
+        h1.tt Kiến thức Răng sứ
+        form(action="")
+          .form-search
+            input.form-input(type="text", placeholder="Tìm kiếm")
+            +img("common/ico_search.svg")
+        ul.suggest-list
+          li.suggest-item
+            a(href="#") Bọc răng sứ giá bao nhiêu?
+          li.suggest-item
+            a(href="#") Tổng hợp dáng răng sứ đẹp
+          li.suggest-item
+            a(href="#") Bảng màu răng sứ
+          li.suggest-item
+            a(href="#") Quy trình bọc răng sứ
+          li.suggest-item
+            a(href="#") Bọc răng sứ ở đâu tốt nhất
+          li.suggest-item
+            a(href="#") Cảm giác sau khi bọc răng sứ
+          li.suggest-item
+            a(href="#") Bọc răng sứ mất bao lâu
+          li.suggest-item
+            a(href="#") Cách chăm sóc răng sứ
+          li.suggest-item
+            a(href="#") Những trường hợp nên bọc răng sứ
+  .blog-wrap
+    .container(data-aos="fade-up")
+      ul.blog-list
+        - var n = 0;
+        while n < 12
+          li.blog-item
+            +articleItem
+          - n++
+      include ./_modules/pagination
+
+
+
